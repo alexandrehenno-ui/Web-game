@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sniper Shooting Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-screen" class="screen">
+        <h1>Sniper Shooting Game</h1>
+        <input type="text" id="player-name" placeholder="Enter your name" maxlength="15">
+        <button id="single-player-btn">Single Player</button>
+        <button id="multi-player-btn">Play with Friend</button>
+        <div id="friend-name-container" style="display:none;">
+            <input type="text" id="friend-name" placeholder="Friend's name" maxlength="15">
+            <button id="start-multi-btn">Start Game</button>
+        </div>
+    </div>
+    <div id="game-screen" class="screen" style="display:none;">
+        <div id="game-header">
+            <span id="player-info"></span>
+            <span id="score">Score: 0</span>
+            <button id="logout-btn">Logout</button>
+        </div>
+        <canvas id="game-canvas" width="800" height="500"></canvas>
+        <div id="game-footer">
+            <span id="timer">Time: 30</span>
+            <span id="turn-info"></span>
+        </div>
+    </div>
+    <div id="end-screen" class="screen" style="display:none;">
+        <h2 id="end-message"></h2>
+        <button id="play-again-btn">Play Again</button>
+        <button id="exit-btn">Exit</button>
+        <div id="leaderboard-container">
+            <h3>Leaderboard</h3>
+            <ul id="leaderboard"></ul>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
